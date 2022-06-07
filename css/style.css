@@ -171,11 +171,4 @@ body {
   transition: transform 1s, -webkit-transform 1s;
   margin-top: 0;
 }
-
-@media screen and (min-width: 1200px) and (orientation: landscape) {
-  * {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-}
 /*# sourceMappingURL=style.css.map */
