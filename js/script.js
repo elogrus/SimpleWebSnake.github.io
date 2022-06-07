@@ -1,3 +1,13 @@
+function adaptiveForSensor() {
+    let docWidth = document.documentElement.clientWidth;
+    let docHeight = document.documentElement.clientHeight;
+
+    
+}
+
+
+
+
 const canvas = document.querySelector("#field");
 const ctx = canvas.getContext("2d");
 ctx.fillStyle = "#8BC34A";
