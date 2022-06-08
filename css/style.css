@@ -232,7 +232,6 @@ body {
   .wrapper {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
-    margin-top: -5%;
   }
 }
 
@@ -240,7 +239,6 @@ body {
   .wrapper {
     -webkit-transform: scale(0.85);
             transform: scale(0.85);
-    margin-top: -10%;
   }
 }
 
@@ -248,7 +246,6 @@ body {
   .wrapper {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
-    margin-top: -15%;
   }
 }
 
@@ -256,7 +253,6 @@ body {
   .wrapper {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
-    margin-top: -25%;
   }
 }
 
@@ -264,7 +260,6 @@ body {
   .wrapper {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
-    margin-top: -35%;
   }
 }
 
@@ -272,7 +267,6 @@ body {
   .wrapper {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
-    margin-top: -50%;
   }
 }
 
