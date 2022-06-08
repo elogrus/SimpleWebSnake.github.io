@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Змейка</title>
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="wrapper">
-        <p class="pointer" id="pointer">0 очков</p>
+        <p class="pointer" id="pointer">0 points</p>
         <div class="game_wrapper">
             <canvas height="500px" width="500px" id="field"></canvas>
             <div class="modal" id="gg" hidden="true">
                 <p class="info">GG</p>
-                <button class="button" id="reload">Заново?</button>
+                <button class="button" id="reload">Retry?</button>
             </div>
             <div class="modal timer" id="timer">
                 <p class="info"></p>
             </div>
         </div>
+        <div class="arrows_wrapper">
+            <div class="line">
+                <div class="arrow" onclick="changeDirection('top')"><p>ᐃ</p></div>
+            </div>
+            <div class="line">
+                <div class="arrow" onclick="changeDirection('left')"><p>ᐊ</p></div>
+                <div class="arrow" onclick="changeDirection('bottom')"><p>ᐁ</p></div>
+                <div class="arrow" onclick="changeDirection('right')"><p>ᐅ</p></div>
+            </div>
+        </div>
     </div>
-    <script defer src="./js/script.js"></script>
+    <p class="rotate">Please rotate your device to portrait orientation</p>
+    <script defer src="js/script.js"></script>
 </body>
 </html>

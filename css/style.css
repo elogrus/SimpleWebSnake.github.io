@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* < Styles reseter > */
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
 *, ::before, ::after {
@@ -68,9 +69,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -170,5 +171,132 @@ body {
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
   margin-top: 0;
+}
+
+.arrows_wrapper {
+  width: 100%;
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.arrows_wrapper .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.arrow {
+  border: 2px solid grey;
+  border-radius: 20px;
+  width: 120px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+  background-color: rgba(179, 179, 179, 0.3);
+}
+
+.rotate {
+  display: none;
+  margin: 0 auto;
+  font-size: 3em;
+  text-align: center;
+  width: 90vw;
+  height: 90vh;
+  position: relative;
+}
+
+.rotate::after {
+  content: "🗘";
+  top: -0.3em;
+  position: relative;
+  display: block;
+  font-size: 3.5em;
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    margin-top: -5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+    margin-top: -10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin-top: -15%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    margin-top: -25%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    margin-top: -35%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .wrapper {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    margin-top: -50%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .wrapper {
+    -webkit-transform: scale(0.45);
+            transform: scale(0.45);
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .wrapper {
+    display: none !important;
+  }
+  .rotate {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .arrows_wrapper {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

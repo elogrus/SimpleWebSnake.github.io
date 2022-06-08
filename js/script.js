@@ -1,13 +1,3 @@
-function adaptiveForSensor() {
-    let docWidth = document.documentElement.clientWidth;
-    let docHeight = document.documentElement.clientHeight;
-
-    
-}
-
-
-
-
 const canvas = document.querySelector("#field");
 const ctx = canvas.getContext("2d");
 ctx.fillStyle = "#8BC34A";
@@ -37,23 +27,41 @@ let cutSnakePromise = new Promise(() => {});
 document.addEventListener("keydown", changeDirection)
 
 function changeDirection(event) {
+    switch (event) {
+        case "left":
+            if (direction == "right") return;
+            weakDirection = 'left';
+            return;
+        case "top":
+            if (direction == "bottom") return;
+            weakDirection = 'top';
+            return;
+        case "right":
+            if (direction == "left") return;
+            weakDirection = 'right';
+            return;
+        case "bottom":
+            if (direction == "top") return;
+            weakDirection = 'bottom';
+            return;
+    }
     switch (event.keyCode) {
         case 37:
-            if (direction == "right") break;
+            if (direction == "right") return;
             weakDirection = 'left';
-            break;
+            return;
         case 38:
-            if (direction == "bottom") break;
+            if (direction == "bottom") return;
             weakDirection = 'top';
-            break;
+            return;
         case 39:
-            if (direction == "left") break;
+            if (direction == "left") return;
             weakDirection = 'right';
-            break;
+            return;
         case 40:
-            if (direction == "top") break;
+            if (direction == "top") return;
             weakDirection = 'bottom';
-            break;
+            return;
     }
 };
 
@@ -137,7 +145,7 @@ function cutSnake(startPiece) {
         return (findPiece != snakePiecesList[0] && findPiece.x == startPiece.x && findPiece.y == startPiece.y)
     });
     removed = snakePiecesList.splice(startPieceIndex)     
-    setPoint(getPoints() - removed.length)
+    setPoint(getPoints() - removed.length + 1)
     for (piece of removed) {
         ctx.clearRect(piece.x, piece.y, 25, 25);
     }
@@ -151,12 +159,12 @@ function exitGame() {
 
 function addPoint(num) {
     let pointsNow = parseInt(pointer.innerHTML);
-    pointer.innerHTML = pointsNow + num + " очков";
+    pointer.innerHTML = pointsNow + num + " points";
 }
 
 function setPoint(num) {
     let pointsNow = parseInt(pointer.innerHTML);
-    pointer.innerHTML = num + " очков";
+    pointer.innerHTML = num + " points";
 }
 
 function getPoints() {
@@ -223,10 +231,10 @@ createApple();
 let timerWrapper = document.querySelector("#timer");
 let timerNumber = timerWrapper.querySelector(".info");
 
-let i = 1;
+let i = 3;
 
 function countTimer() {
-    if (i == 4) {
+    if (i == 0) {
         timerWrapper.setAttribute("hidden", "true")
         clearInterval(preGameTimer);
     }
@@ -240,7 +248,7 @@ function countTimer() {
     timerNumber.style.transform = "scale(1)";
     
     timerNumber.innerHTML = String(i);
-    i++;
+    i--;
 }
 
 countTimer();
