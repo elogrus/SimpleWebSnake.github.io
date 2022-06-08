@@ -8,3 +8,4 @@ TODO:
 - Add golden apples (+5 points)
 - Add achievments (localstorage)
 - +speed on every X points (async)
+- Replace rotate-symbol to icon at touchscreen-landscape version 
