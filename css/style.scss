@@ -4,6 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
    
+* {
+    user-select: none;
+}
+
+.pointer {
+    user-select: text;
+}
 
 body {
     overflow: hidden;
@@ -112,6 +119,7 @@ body {
     align-items: center;
     font-size: 3rem;
     background-color: rgba(179, 179, 179, 0.3);
+    
 }
 
 .rotate {
